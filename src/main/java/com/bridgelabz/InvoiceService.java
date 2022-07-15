@@ -2,8 +2,11 @@ package com.bridgelabz;
 
 
 public class InvoiceService {
-    public static void main(String[] args) {
+    private static final double COST_PER_KM = 10;
+    private static final double COST_PER_MIN = 1;
 
-        System.out.println("Welcome to cab invoice generator program");
+    public double calculateFare(double distance, int time) {
+
+        return distance * COST_PER_KM + time * COST_PER_MIN;
     }
 }
